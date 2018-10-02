@@ -1,0 +1,5 @@
+﻿  NondecreasingSubsequence.cpp
+f:\c++ files\nondecreasingsubsequence\nondecreasingsubsequence\nondecreasingsubsequence.cpp(8): warning C4018: '<': signed/unsigned mismatch
+f:\c++ files\nondecreasingsubsequence\nondecreasingsubsequence\nondecreasingsubsequence.cpp(18): warning C4018: '<': signed/unsigned mismatch
+f:\c++ files\nondecreasingsubsequence\nondecreasingsubsequence\nondecreasingsubsequence.cpp(48): warning C4018: '<': signed/unsigned mismatch
+  NondecreasingSubsequence.vcxproj -> F:\C++ files\NondecreasingSubsequence\Debug\NondecreasingSubsequence.exe
