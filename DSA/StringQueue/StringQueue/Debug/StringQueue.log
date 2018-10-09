@@ -1,0 +1,3 @@
+﻿  StringQueue.cpp
+f:\c++ files\stringqueue\stringqueue\squeue.h(53): warning C4715: 'SQueue::addLast': not all control paths return a value
+  StringQueue.vcxproj -> F:\C++ files\StringQueue\Debug\StringQueue.exe
