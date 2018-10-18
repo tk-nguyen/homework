@@ -1,35 +1,32 @@
 package lab06.GraphicClasses;
 
-public class Triangle extends Shape {
+import java.awt.*;
 
-	private double firstSide;
-	private double secondSide;
-	private double thirdSide;
+import javax.swing.*;
+
+public class Triangle extends JComponent
+{
+
+	private Point firstPoint;
+	private Point secondPoint;
+	private Point thirdPoint;
 	
-	public Triangle() {}
+	public Triangle() {};
 	
-	public Triangle(double posX, double posY, String color, double firstSide, double secondSide, double thirdSide)
+	public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint)
 	{
-		super(posX, posY, color);
-		this.firstSide = firstSide;
-		this.secondSide = secondSide;
-		this.thirdSide = thirdSide;
+		this.firstPoint = firstPoint;
+		this.secondPoint = secondPoint;
+		this.thirdPoint = thirdPoint;
 	}
 
-
-	public void printDetails() 
+	public void paintComponent(Graphics g)
 	{
-		System.out.println("This triangle's position is: (" + this.getPosX() + ", " + this.getPosY() + ")");
-		System.out.println("This triangle's 3 sides are: " + this.firstSide + " " + this.secondSide + " " + this.thirdSide);
-		System.out.println("This triangle's color is: " + this.getColor());
-	}
-
-	
-	public void moveShape(double newX, double newY) 
-	{
-		this.setPosX(newX);
-		this.setPosY(newY);
-		System.out.println("This triangle's new position is: (" + this.getPosX() + ", " + this.getPosY() + ")");
+		Graphics2D draw = (Graphics2D) g;
+		draw.drawLine(firstPoint.x, firstPoint.y, secondPoint.x, secondPoint.y);
+		draw.drawLine(firstPoint.x, firstPoint.y, thirdPoint.x, thirdPoint.y);
+		draw.drawLine(secondPoint.x, secondPoint.y, thirdPoint.x, thirdPoint.y);
+		
 	}
 
 }

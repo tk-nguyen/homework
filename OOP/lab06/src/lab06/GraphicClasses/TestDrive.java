@@ -1,22 +1,22 @@
 package lab06.GraphicClasses;
 
-public class TestDrive 
+import java.awt.*;
+import javax.swing.*;
+
+public class TestDrive
 {
-	public static void main(String[] args)
-	{	
-		Circle test = new Circle(2.5, 3.5, "Red");
-		test.printDetails();
-		
-		Triangle test2 = new Triangle(3, 4, "Yellow", 5, 6, 7.8);
-		test2.moveShape(10.6, 2.8);
-		test2.printDetails();
-		
-		System.out.println("The number of layers are: " + test.getNumberOfLayers());
-		System.out.println("The number of shapes are: " + test.getNumberOfShapes());
-		
-		test2.deleteCircle();
-		System.out.println("The number of layers are: " + test.getNumberOfLayers());
-		System.out.println("The number of shapes are: " + test.getNumberOfShapes());
-		
-	}
+	 public static void main(String[] args) 
+	 {
+	     JFrame f = new JFrame("SHAPES");
+		 f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+		 f.setSize(600, 400);
+	     f.setVisible(true); 
+	     
+	     Triangle tri = new Triangle(new Point(100, 200), new Point(150, 200), new Point(80, 90));
+	     Rectangle rect = new Rectangle(220, 260, 100, 110);
+	     f.getContentPane().add(tri);
+	     f.getContentPane().add(rect);
+	     
+	 }
 }
+

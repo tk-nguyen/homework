@@ -1,44 +1,32 @@
 package lab06.GraphicClasses;
 
-public class Rectangle extends Shape 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JComponent;
+
+public class Rectangle extends JComponent
 {
-	private double length;
-	private double width;
+	private int x;
+	private int y;
+	private int height;
+	private int width;
 	
 	public Rectangle() {}
-	public Rectangle(double posX, double posY, double length, double width, String color)
+
+	public Rectangle(int x, int y, int height, int width) 
 	{
-		super(posX, posY, color);
-		this.length = length;
+		this.x = x;
+		this.y = y;
+		this.height = height;
 		this.width = width;
 	}
 	
-	
-	public double getLength() {
-		return length;
-	}
-	public void setLength(double length) {
-		this.length = length;
-	}
-	public double getWidth() {
-		return width;
-	}
-	public void setWidth(double width) {
-		this.width = width;
-	}
-	
-	public void printDetails() 
+	public void paintComponent(Graphics g)
 	{
-		System.out.println("This rectangle's position is: (" + this.getPosX() + ", " + this.getPosY() + ")");
-		System.out.println("This rectangle's color is: " + this.getColor());
-	}
-
-
-	public void moveShape(double newX, double newY) 
-	{
-		this.setPosX(newX);
-		this.setPosY(newY);
-		System.out.println("This rectangle's new position is: (" + this.getPosX() + ", " + this.getPosY() + ")");
+		Graphics2D rect = (Graphics2D) g;
+		
+		rect.drawRect(x, y, width, height);
 	}
 
 }
